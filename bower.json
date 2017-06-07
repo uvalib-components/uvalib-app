@@ -1,0 +1,42 @@
+{
+  "name": "uvalib-app",
+  "main": "uvalib-app.html",
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.4.0",
+    "uvalib-elements": "uvalib-components/uvalib-elements#master"
+  },
+  "devDependencies": {
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0"
+  },
+  "resolutions": {
+    "polymer": "^1.8.1",
+    "web-component-tester": "^5.0.1",
+    "iron-icons": "^1.2.1",
+    "uvalib-elements": "master",
+    "mocha": "^3.1.2",
+    "lodash": "^4.17.4",
+    "uvalib-alerts": "master",
+    "uvalib-button": "master",
+    "uvalib-banner": "master",
+    "uvalib-analytics": "master",
+    "app-storage": "^0.10.0",
+    "uvalib-events-card": "master",
+    "uvalib-hours-card": "master",
+    "uvalib-models": "master",
+    "uvalib-logos": "master",
+    "uvalib-nav": "master",
+    "uvalib-card": "master",
+    "uvalib-search-box": "master",
+    "uvalib-theme": "master",
+    "uvalib-header": "master",
+    "uvalib-skip-nav": "master",
+    "uvalib-news-section": "master",
+    "uvalib-helper-libs": "master",
+    "uvalib-liame": "master",
+    "uvalib-social-links": "master",
+    "uvalib-footer": "master"
+  }
+}
