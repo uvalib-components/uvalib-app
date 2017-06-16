@@ -37,6 +37,8 @@
     "uvalib-helper-libs": "master",
     "uvalib-liame": "master",
     "uvalib-social-links": "master",
-    "uvalib-footer": "master"
+    "uvalib-footer": "master",
+    "uvalib-images": "master",
+    "uva-footer": "master"
   }
 }
