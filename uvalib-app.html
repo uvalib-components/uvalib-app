@@ -354,6 +354,7 @@
       }
       #hours {
         @apply(--layout-flex);
+        padding: 10px;
       }
 
     </style>
@@ -369,76 +370,46 @@
           <iron-signals on-iron-signal-triggersearch="_triggerSearch"></iron-signals>
 
           <div class="center">
-            <div class="top">
-              <div id="banner" class="center">
-                <uvalib-banners large-screen$="[[_largeScreen]]" medium-screen$="[[_mediumScreen]]"></uvalib-banners>
-              </div>
-              <div id="hours">
-                <uvalib-hours-card id="todayhours" class="card" vertical locations="Alderman,Brown,Clemons,Fine,Special">
-                  <uvalib-button href="http://cal.lib.virginia.edu/hours/">View all hours</uvalib-button>
-                </uvalib-hours-card>
-              </div>
+            <div class="top catd-container">
+              <uvalib-banners id="banner" large-screen$="[[_largeScreen]]" medium-screen$="[[_mediumScreen]]"></uvalib-banners>
+              <uvalib-hours-card id="hours" class="card" vertical locations="Alderman,Brown,Clemons,Fine,Special">
+                <uvalib-button href="http://cal.lib.virginia.edu/hours/">View all hours</uvalib-button>
+              </uvalib-hours-card>
             </div>
           </div>
 
           <div class="center">
             <div id="shady-box">
-
-              <template is="dom-if" if="[[_largeScreen]]" restamp>
                 <div class="card-container">
-
-                  <uvalib-hours-card id="todayhours" class="card" locations="Alderman,Brown,Clemons,Fine,Special">
-                    <uvalib-button href="http://cal.lib.virginia.edu/hours/">View all hours</uvalib-button>
-                  </uvalib-hours-card>
                   <uvalib-research-card class="card"></uvalib-research-card>
                   <uvalib-spaces-card class="card"></uvalib-spaces-card>
+                  <uvalib-featured-content-card class="card darker" content-type="services" heading="Services"
+                    href="/services" link-text="More services" image="https://static.lib.virginia.edu/images/card-images/services.jpg"></uvalib-featured-content-card>
                 </div>
-              </template>
-              <template is="dom-if" if="[[!_largeScreen]]" restamp>
-                <div class="card-container" style="margin-bottom: 0;">
-                  <uvalib-hours-card id="todayhours" class="card" vertical locations="Alderman,Brown,Clemons,Fine,Special">
-                    <uvalib-button href="http://cal.lib.virginia.edu/hours/">View all hours</uvalib-button>
-                  </uvalib-hours-card>
-                  <uvalib-research-card class="card"></uvalib-research-card>
-                </div>
-                <div class="card-container">
-                  <uvalib-spaces-card class="card"></uvalib-spaces-card>
-                  <template is="dom-if" if="[[!_largeScreen]]" restamp>
-                    <uvalib-featured-content-card class="card" content-type="services" heading="Services"
-                      href="/services" link-text="More services" image="https://static.lib.virginia.edu/images/card-images/services.jpg"></uvalib-featured-content-card>
-                  </template>
-                </div>
-              </template>
-
             </div>
           </div>
 
           <div id="upper">
             <div class="card-container">
-              <template is="dom-if" if="[[_largeScreen]]" restamp>
-                <uvalib-featured-content-card class="card darker" content-type="services" heading="Services"
-                  href="/services" link-text="More services" image="https://static.lib.virginia.edu/images/card-images/services.jpg"></uvalib-featured-content-card>
-              </template>
               <uvalib-events-card class="card" heading="Upcoming Events" elevation="3" max-num-events-shown="2">
                   <uvalib-button href="http://cal.lib.virginia.edu/calendar/events">View calendar</uvalib-button>
               </uvalib-events-card>
-            </div>
-          </div>
-
-          <div class="center">
-            <div id="news">
-              <h2 hidden$="[[!_largeScreen]]">Library News</h2>
-              <div class="card-container news">
-                <uvalib-news items="{{newsItems}}" limit="[[_newsItemCount(_smallScreen)]]"></uvalib-news>
-                <template is="dom-repeat" items="[[newsItems]]">
-                  <div class="card" data-url$="[[item.url]]" on-tap="_followURL">
-                    <div class="source">Source: UVA Library news</div>
-                    <h2>[[_decodeHtml(item.title)]]</h2>
-                    <div class="body">[[_stripAndTruncate(item.excerpt, 200)]]</div>
-                  </div>
-                </template>
+              <!--
+              <div id="news">
+                <h2 hidden$="[[!_largeScreen]]">Library News</h2>
+                <div class="card-container news">
+                  <uvalib-news items="{{newsItems}}" limit="[[_newsItemCount(_smallScreen)]]"></uvalib-news>
+                  <template is="dom-repeat" items="[[newsItems]]">
+                    <div class="card" data-url$="[[item.url]]" on-tap="_followURL">
+                      <div class="source">Source: UVA Library news</div>
+                      <h2>[[_decodeHtml(item.title)]]</h2>
+                      <div class="body">[[_stripAndTruncate(item.excerpt, 200)]]</div>
+                    </div>
+                  </template>
+                </div>
+                <uvalib-button href="http://news.library.virginia.edu/">More News</uvalib-button>
               </div>
-              <uvalib-button href="http://news.library.virginia.edu/">More News</uvalib-button>
+            -->
             </div>
           </div>
 
