@@ -1,29 +1,28 @@
 <!doctype html>
 <html>
   <head>
-    <title>uvalib-app demo</title>
+    <title>uvalib-app demo (Starrie testing version)</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
-    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
-
+    <link rel="import" href="../../uvalib-theme/typekit.html">
     <link rel="import" href="../uvalib-app.html">
 
-    <style is="custom-style" include="demo-pages-shared-styles">
+    <style>
+
+      body {
+        margin: 0;
+        font-family: 'Roboto', 'Noto', sans-serif;
+        line-height: 1.5;
+        min-height: 100vh;
+        background-color: #eee;
+      }
+
     </style>
+
   </head>
   <body>
-
-    <div class="vertical-section-container centered">
-      <h3>Basic uvalib-app Demo</h3>
-      <demo-snippet>
-        <template>
-          <uvalib-app></uvalib-app>
-        </template>
-      </demo-snippet>
-    </div>
-
+      <uvalib-app></uvalib-app>
   </body>
 </html>
