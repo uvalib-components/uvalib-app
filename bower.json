@@ -2,11 +2,13 @@
   "name": "uvalib-app",
   "main": "uvalib-app.html",
   "dependencies": {
-    "uvalib-elements": "uvalib-components/uvalib-elements#master"
+    "uvalib-elements": "uvalib-components/uvalib-elements#master",
+    "uvalib-banner": "uvalib-components/uvalib-banner#new"
   },
   "resolutions": {
     "lodash": "^4.17.4",
     "app-storage": "1 - 2",
-    "promise-polyfill": "^1.0.0"
+    "promise-polyfill": "^1.0.0",
+    "uvalib-banner": "new"
   }
 }
