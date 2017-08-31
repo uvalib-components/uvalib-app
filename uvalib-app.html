@@ -23,13 +23,6 @@
 <link rel="import" href="../uvalib-news-section/uvalib-news.html">
 <link rel="import" href="../uvalib-helper-libs/uvalib-helper-behaviors.html">
 
-<!--
-<link rel="import" href="../app-route/app-location.html">
-<link rel="import" href="../app-route/app-route.html">
-<link rel="import" href="../iron-pages/iron-pages.html"
-<link rel="import" href="../page-title/page-title.html">
--->
-
 <dom-module id="uvalib-app">
   <template>
     <style is="custom-style" include="uvalib-theme">
@@ -53,15 +46,7 @@
         @apply(--layout-flex);
         @apply(--layout-self-stretch);
       }
-/*
-      uvalib-search-box {
-        top: -91px;
-        max-width: var(--uvalib-display-width-max);
-        width: 100%;
-        position: absolute;
-        z-index: 1000000000;
-      }
-*/
+
       uvalib-search-box {
         width: 100%;
         max-width: 1200px;
@@ -74,20 +59,12 @@
       #banner {
         width: 100%;
         max-width: 1200px;
-/*        padding-top: 115px; */
       }
 
       .center {
         @apply(--layout-vertical);
         @apply(--layout-center);
         position: relative;
-      }
-
-      #shady-box, #upper, #news, #lower {
-        /*
-        padding-left: 10px;
-        padding-right: 10px;
-        */
       }
 
       #shady-box {
@@ -370,43 +347,15 @@
       }
 
     </style>
-<!--
-    <app-location route="{{route}}"></app-location>
-    <app-route
-        id="router"
-        route="{{route}}"
-        pattern="/:page"
-        data="{{routeData}}"
-        tail="{{subroute}}"></app-route>
--->
 
-<!--
-    <uvalib-model-pages id="uvapages" path="[[routeData.page]]" page="{{pageModel}}"></uvalib-model-pages>
--->
-    <!--
-    <page-title base-title="UVA Library" page-title="[[_pageTitle(pageModel.title, routeData.page)]]"></page-title>
-    -->
     <uvalib-page id="page"
                  on-skiptosearch="_triggerSearch"
+                 on-skiptocontent="_gotoContent"
                  small-screen="{{_smallScreen}}"
                  medium-screen="{{_mediumScreen}}"
                  large-screen="{{_largeScreen}}"
                  screen-size="{{_screenSize}}">
-<!--
-      <iron-pages id="pages" attr-for-selected="name" selected="[[_whichIronPage(routeData.page)]]" fallback=selection="pagepull">
-        <div name="pagepull" class="pagepull">
-          <div id="pagepull"></div>
-        </div>
-        <div name="research">
-          <h2>Research</h2>
-        </div>
-        <div name="collections">
-          <h2>Collections</h2>
-        </div>
-        <div name="services">
-          <h2>Services</h2>
-        </div>
-      -->
+
         <div name="homepage" title="UVA Library - Homepage">
 
           <iron-signals on-iron-signal-triggersearch="_triggerSearch"></iron-signals>
@@ -509,9 +458,7 @@
             </div>
           </div>
         </div>
-<!--
-      </iron-pages>
--->
+
     </uvalib-page>
 
   </template>
@@ -612,7 +559,9 @@
         '_routePageChanged(routeData.page)',
         '_updateScreenSize(_smallScreen,_mediumScreen,_largeScreen)'
       ],
+      _gotoContent: function(){
 
+      },
       _triggerSearch: function(){
         window.scrollTo(0, 0);
         this.$$('#searchbox').focus();
