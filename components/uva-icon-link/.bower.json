@@ -1,0 +1,19 @@
+{
+  "name": "uva-icon-link",
+  "description": "Link with icon",
+  "main": "uva-icon-link.html",
+  "dependencies": {
+    "uvalib-elements": "uvalib-components/uvalib-elements#master",
+    "fontawesome-iconset": "uva-components/font-awesome-polymer-icons#master"
+  },
+  "homepage": "https://github.com/uva-components/uva-icon-link",
+  "_release": "21f4211ac6",
+  "_resolution": {
+    "type": "branch",
+    "branch": "2.0",
+    "commit": "21f4211ac6c0cf2f44c5fc9a289a6f29511d2040"
+  },
+  "_source": "https://github.com/uva-components/uva-icon-link.git",
+  "_target": "2.0",
+  "_originalSource": "uva-components/uva-icon-link"
+}

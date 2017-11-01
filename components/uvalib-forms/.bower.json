@@ -1,0 +1,21 @@
+{
+  "name": "uvalib-forms",
+  "main": "uvalib-forms.html",
+  "dependencies": {
+    "uvalib-elements": "uvalib-components/uvalib-elements#master"
+  },
+  "resolutions": {
+    "lodash": "^4.17.4",
+    "app-storage": "^0.10.0"
+  },
+  "homepage": "https://github.com/uvalib-components/uvalib-forms",
+  "_release": "6025c4384c",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "6025c4384c6eca931af20affd6ac7e48edc3fc77"
+  },
+  "_source": "https://github.com/uvalib-components/uvalib-forms.git",
+  "_target": "master",
+  "_originalSource": "uvalib-components/uvalib-forms"
+}

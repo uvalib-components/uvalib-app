@@ -1,0 +1,9 @@
+{
+  "name": "uva-icon-link",
+  "description": "Link with icon",
+  "main": "uva-icon-link.html",
+  "dependencies": {
+    "uvalib-elements": "uvalib-components/uvalib-elements#master",
+    "fontawesome-iconset": "uva-components/font-awesome-polymer-icons#master"
+  }
+}

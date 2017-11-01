@@ -1,0 +1,22 @@
+{
+  "name": "uvalib-card",
+  "description": "Card display component for the Library Web",
+  "main": "uvalib-card.html",
+  "dependencies": {
+    "uvalib-elements": "uvalib-components/uvalib-elements#master"
+  },
+  "resolutions": {
+    "lodash": "^4.17.4",
+    "app-storage": "1 - 2"
+  },
+  "homepage": "https://github.com/uvalib-components/uvalib-card",
+  "_release": "c8d926a6cf",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "c8d926a6cf520ee14f86f66e772e3eb0e4e2d949"
+  },
+  "_source": "https://github.com/uvalib-components/uvalib-card.git",
+  "_target": "master",
+  "_originalSource": "uvalib-components/uvalib-card"
+}
